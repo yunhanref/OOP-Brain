@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
   <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/4c6a0544-41c5-4a51-99e9-fc813302013a" />
 </div>
 
