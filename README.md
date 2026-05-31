@@ -7,3 +7,22 @@ Bu kütüphane, Kocaeli Üniversitesi, Manisa Celal Bayar Üniversitesi ve Hitit
 
 ## Mimari Yapı
 UML diyagramımıza sadık kalınarak sistem `process()` metotları üzerinden ileri iletimi sağlamakta ve çalışma zamanı polimorfizmi ile katmanları `NeuralNetwork` sınıfı altında entegre etmektedir.
+
+```
+OOP-Brain/
+│
+├── .gitignore
+├── README.md
+├── src/
+│   ├── main.cpp
+│   ├── Matrix.h
+│   ├── Matrix.cpp
+│   ├── IActivation.h
+│   ├── Activations.h
+│   ├── BaseLayer.h
+│   ├── DenseLayer.h
+│   ├── DenseLayer.cpp
+│   ├── NeuralNetwork.h
+│   ├── NeuralNetwork.cpp
+│   └── Exceptions.h
+```
