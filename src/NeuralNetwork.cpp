@@ -12,5 +12,10 @@ void NeuralNetwork::pushLayer(BaseLayer* l) {
 }
 
 Matrix NeuralNetwork::run(const Matrix& input) {
-    return Matrix(0, 0);
+    Matrix current = input;
+    // Agin icindeki tum katmanlari sirayla calistirip birbirine baglar
+    for (BaseLayer* layer : pipeline) {
+        current = layer->forward(current);
+    }
+    return current;
 }
