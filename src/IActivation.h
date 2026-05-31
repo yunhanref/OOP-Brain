@@ -2,6 +2,6 @@
 
 class IActivation {
 public:
-    virtual ~IActivation() noexcept = default; 
+    virtual ~IActivation() = default;
     virtual double transform(double val) const noexcept = 0; 
 };
