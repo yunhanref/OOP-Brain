@@ -1,0 +1,18 @@
+# C++ Derleme Çıktıları
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE ve OS Dosyaları
+.vscode/
+.vs/
+*.suo
+*.user
+.DS_Store
+
+# Build Klasörü
+build/
+bin/
