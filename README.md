@@ -57,3 +57,9 @@ Projeyi derlemek ve test sonuçlarını görmek için terminalinizde projenin `s
 ```cmd
 cl /EHsc *.cpp /Fe:oop_brain.exe
 oop_brain.exe
+
+```
+<div align="center">
+  <img width="736" height="887" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
+  <p>"1881-193∞"</p>
+</div>
