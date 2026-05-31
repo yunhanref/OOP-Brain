@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img width="320" height="480" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/d25e1bd1-06e9-41e7-9fc2-d68fc4341bd4" />
+  <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/4c6a0544-41c5-4a51-99e9-fc813302013a" />
 </div>
 
 # OOP-Brain: Modüler C++ Sinir Ağı Kütüphanesi
