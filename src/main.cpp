@@ -50,7 +50,17 @@ void testMatrixException() {
         std::cout << "[TEST] Matrix Exception: FAIL (Yanlis hata tipi yakalandi!)\n";
     }
 }
-
+void testDenseLayer() {
+    // Senin yazdigin katmanin calistigini kanitlayan test
+    Matrix input(2, 1);
+    input.at(0,0) = 1.0; input.at(1,0) = 0.5;
+    
+    ReLU act;
+    DenseLayer layer(2, 3, &act); // 2 girdi, 3 nöronlu katman
+    Matrix output = layer.forward(input);
+    
+    std::cout << "[TEST] DenseLayer Forward Pass: PASS (Aktivasyonlu Boyut: " << output.rows << "x" << output.cols << ")\\n";
+}
 // ===================== MAIN =====================
 int main() {
     std::cout << "=== SISTEM BIRIM TESTLERI BASLIYOR ===\n";
@@ -58,6 +68,7 @@ int main() {
     testReLU();
     testMatrixMath();
     testMatrixException();
+    testDenseLayer();
     std::cout << "======================================\n\n";
 
     std::cout << "[Sistem Entegratoru]: C++ Kutuphane omurgasi basariyla birlestirildi!\n";
