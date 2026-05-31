@@ -12,5 +12,5 @@ public:
     DenseLayer(int in_dim, int out_dim, IActivation* act);
     ~DenseLayer() noexcept override;
     
-    Matrix process(const Matrix& in) override;
+    Matrix forward(const Matrix& in) override;
 };
