@@ -16,3 +16,6 @@
 # Build Klasörü
 build/
 bin/
+
+# Extra
+.idea/
