@@ -26,10 +26,10 @@
 ## Temel Özellikler
 
  **Kütüphanesiz (No Dependencies):** Yalnızca Standart C++ kütüphaneleri kullanılarak inşa edilmiştir.
- ** Sıfır Bellek Sızıntısı (0 Leak):** Deep copy, taşıma (move) semantikleri ve sanal yıkıcılar (virtual destructors) kullanılarak dinamik bellek yönetimi kusursuzlaştırılmıştır.
- ** Arayüz Tabanlı Tasarım (Interface-Based Design):** Polimorfizm (çok biçimlilik) sayesinde, sistemin ana omurgasına dokunmadan yeni aktivasyon fonksiyonları veya katman türleri sisteme kolayca enjekte edilebilir (Open/Closed Principle).
- ** Model Persistence (Kalıcılık):** Eğitilmiş ağ ağırlıkları (weights) ve sapma (bias) değerleri `.csv` formatında diske kaydedilebilir ve sonradan diskten okunabilir.
- ** Özel Hata Yönetimi:** Matris boyut uyuşmazlıkları (örn. geçersiz matris çarpımları) veya hatalı dosya formatları, özel Exception sınıfları ile çalışma zamanında sistem çökmeden güvenle yakalanır.
+ **Sıfır Bellek Sızıntısı (0 Leak):** Deep copy, taşıma (move) semantikleri ve sanal yıkıcılar (virtual destructors) kullanılarak dinamik bellek yönetimi kusursuzlaştırılmıştır.
+ **Arayüz Tabanlı Tasarım (Interface-Based Design):** Polimorfizm (çok biçimlilik) sayesinde, sistemin ana omurgasına dokunmadan yeni aktivasyon fonksiyonları veya katman türleri sisteme kolayca enjekte edilebilir (Open/Closed Principle).
+ **Model Persistence (Kalıcılık):** Eğitilmiş ağ ağırlıkları (weights) ve sapma (bias) değerleri `.csv` formatında diske kaydedilebilir ve sonradan diskten okunabilir.
+ **Özel Hata Yönetimi:** Matris boyut uyuşmazlıkları (örn. geçersiz matris çarpımları) veya hatalı dosya formatları, özel Exception sınıfları ile çalışma zamanında sistem çökmeden güvenle yakalanır.
 
 ---
 
