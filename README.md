@@ -57,7 +57,11 @@ OOP-Brain/
 │   ├── DenseLayer.cpp
 │   ├── NeuralNetwork.h
 │   ├── NeuralNetwork.cpp
-│   └── Exceptions.h
+│   ├── Exceptions.h
+│   ├── DataHandler.cpp
+│   ├── DataHandler.h
+│   ├── ModelStorage.cpp
+│   └── ModelStorage.h
 ```
 
 ---
