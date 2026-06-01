@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;KOÜ+%7C+MCBÜ" alt="Proje Başlığı Animasyonu" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBÜ+%7C+KOÜ" alt="Proje Başlığı Animasyonu" />
   
   <p><b>Kocaeli Üniversitesi ve Manisa Celal Bayar Üniversitesi öğrencileri işbirliği ile geliştirilmiştir.</b></p>
 </div>
