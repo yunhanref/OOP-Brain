@@ -2,6 +2,18 @@
   <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/4c6a0544-41c5-4a51-99e9-fc813302013a" />
 </div>
 
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;KOÜ+%7C+MCBÜ+%7C" alt="Proje Başlığı Animasyonu" />
+  
+  <p><b>Kocaeli Üniversitesi ve Manisa Celal Bayar Üniversitesi öğrencileri işbirliği ile geliştirilmiştir.</b></p>
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Machine_Learning-FF9900?style=for-the-badge" alt="Object Oriented Programming" />
+  <img src="https://img.shields.io/badge/CDC_BRFSS_Data-007ACC?style=for-the-badge" alt="Artificial Neural Network" />
+</p>
+
 # OOP-Brain: Modüler C++ Sinir Ağı Kütüphanesi
 
 **OOP-Brain**, C++'ın düşük seviyeli performans avantajları ile yüksek seviyeli Nesne Yönelimli Programlama (OOP) prensiplerini birleştiren, sıfırdan (hiçbir harici ML kütüphanesi kullanılmadan) geliştirilmiş bir yapay sinir ağı ileri iletim (forward pass) motorudur. 
