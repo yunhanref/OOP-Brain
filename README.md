@@ -1,9 +1,6 @@
 <div align="center">
   <img width="478" height="232" alt="CBU KOU" src="https://github.com/user-attachments/assets/039e3da1-d1a3-4a53-a005-4539d2ab705d" />
 </div>
-<div align="center">
-  <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/4c6a0544-41c5-4a51-99e9-fc813302013a" />
-</div>
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;KOÜ+%7C+MCBÜ" alt="Proje Başlığı Animasyonu" />
@@ -80,6 +77,9 @@ cl /EHsc *.cpp /Fe:oop_brain.exe
 oop_brain.exe
 
 ```
+<div align="center">
+  <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/4c6a0544-41c5-4a51-99e9-fc813302013a" />
+</div>
 <div align="center">
   <img width="552" height="664" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
   <p>"1881-193∞"</p>
