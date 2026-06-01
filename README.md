@@ -68,6 +68,8 @@ Projeyi derlemek ve test sonuçlarını görmek için terminalinizde projenin `s
 
 **Windows (MSVC - Developer Command Prompt):**
 ```cmd
+git clone https://github.com/Grup7-Proje/OOP-Brain.git
+cd .\OOP-Brain\
 cl /EHsc *.cpp /Fe:oop_brain.exe
 oop_brain.exe
 
