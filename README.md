@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/CDC_BRFSS_Data-007ACC?style=for-the-badge" alt="Artificial Neural Network" />
 </p>
 
-# OOP-Brain: Modüler C++ Sinir Ağı Kütüphanesi
+# OOP-Brain: Yapay Sinir Ağı Kütüphanesi
 
 **OOP-Brain**, C++'ın düşük seviyeli performans avantajları ile yüksek seviyeli Nesne Yönelimli Programlama (OOP) prensiplerini birleştiren, sıfırdan (hiçbir harici ML kütüphanesi kullanılmadan) geliştirilmiş bir yapay sinir ağı ileri iletim (forward pass) motorudur. 
 
