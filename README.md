@@ -1,10 +1,9 @@
 <div class="row">
   <div class="column">
-    <img width="600" height="600" alt="CBU" src="https://github.com/user-attachments/assets/10fea737-c5da-45c7-966d-e75b55fcf5f2" />
+    <img width="184" height="184" alt="CBU" src="https://github.com/user-attachments/assets/10fea737-c5da-45c7-966d-e75b55fcf5f2" />
   </div>
   <div class="column">
     <img width="184" height="184" alt="KOU" src="https://github.com/user-attachments/assets/1f312336-a0d8-4a4b-961a-3fcaa1db47e8" />
-
   </div>
 </div>
 
