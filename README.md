@@ -80,7 +80,3 @@ oop_brain.exe
 <div align="center">
   <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/4c6a0544-41c5-4a51-99e9-fc813302013a" />
 </div>
-<div align="center">
-  <img width="552" height="664" alt="ataturk" src="https://github.com/user-attachments/assets/78fbb9f4-3472-43f3-b809-440d3070ed84" />
-  <p>"1881-193∞"</p>
-</div>
