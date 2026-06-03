@@ -5,14 +5,9 @@
 DenseLayer::DenseLayer(int in_dim, int out_dim, IActivation* act) 
     : weights(out_dim, in_dim), bias(out_dim, 1), actFunc(act) {
     
-    // Matematik ekibini beklemeden agirliklari rastgele dolduruyoruz (-1 ile 1 arasinda)
-    std::srand(std::time(nullptr));
-    for(int i = 0; i < weights.rows * weights.cols; i++) {
-        weights.data[i] = ((double) std::rand() / (RAND_MAX)) * 2.0 - 1.0;
-    }
-    for(int i = 0; i < bias.rows * bias.cols; i++) {
-        bias.data[i] = ((double) std::rand() / (RAND_MAX)) * 2.0 - 1.0;
-    }
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    weights.randomize(-1.0, 1.0);
+    bias.randomize(-1.0, 1.0);
 }
 
 DenseLayer::~DenseLayer() noexcept {}

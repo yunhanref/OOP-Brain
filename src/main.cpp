@@ -7,9 +7,57 @@
 #include "DataHandler.h"
 #include "ModelStorage.h"
 
+void testMatrixEngine() {
+    std::cout << "--- Matematik Motoru Birim Testleri ---\n";
+    
+    // 1. Matris Olusturma ve () Operatoru
+    Matrix m(2, 3);
+    m(0, 0) = 1.0; m(0, 1) = 2.0; m(0, 2) = 3.0;
+    m(1, 0) = 4.0; m(1, 1) = 5.0; m(1, 2) = 6.0;
+    std::cout << "[Test 1] Matris Eleman Erisimi (() operatoru):\n" << m;
+
+    // 2. Transpoze Testi
+    Matrix mt = m.transpose();
+    if (mt.rows == 3 && mt.cols == 2 && mt(0, 1) == 4.0 && mt(2, 0) == 3.0) {
+        std::cout << "[Basarili] Transpoze islemi dogru.\n";
+    } else {
+        std::cout << "[HATA] Transpoze islemi hatali!\n";
+    }
+
+    // 3. Skaler Carpim Testi
+    Matrix m2 = m * 2.0;
+    if (m2(0, 0) == 2.0 && m2(1, 2) == 12.0) {
+        std::cout << "[Basarili] Skaler carpim dogru.\n";
+    } else {
+        std::cout << "[HATA] Skaler carpim hatali!\n";
+    }
+
+    // 4. Matris Cikarma ve Skaler Toplama/Cikarma
+    Matrix m3 = m2 - m; // should be equal to m
+    Matrix m4 = m3 + 5.0;
+    if (m4(0, 0) == 6.0 && m4(1, 2) == 11.0) {
+        std::cout << "[Basarili] Cikarma ve Skaler toplama dogru.\n";
+    } else {
+        std::cout << "[HATA] Cikarma veya skaler toplama hatali!\n";
+    }
+
+    // 5. In-place ve Hadamard Testi
+    Matrix had = m.hadamard(m);
+    if (had(0, 1) == 4.0 && had(1, 2) == 36.0) {
+        std::cout << "[Basarili] Hadamard carpimi dogru.\n";
+    } else {
+        std::cout << "[HATA] Hadamard carpimi hatali!\n";
+    }
+    
+    std::cout << "---------------------------------------\n\n";
+}
+
 int main() {
     std::cout << "=== GRUP 7: OOP-BRAIN SINIR AGI KUTUPHANESI ===\n";
     std::cout << "[Sistem Entegratoru]: Mimari basariyla ayaga kaldirildi.\n\n";
+
+    // 0. Matematik Motoru Birim Testleri
+    testMatrixEngine();
 
     // 1. Ağın Kurulumu
     NeuralNetwork nn;
