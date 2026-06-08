@@ -77,7 +77,8 @@ Projeyi derlemek ve test sonuçlarını görmek için terminalinizde projenin `s
 cd /d %USERPROFILE%\Desktop
 git clone https://github.com/Grup7-Proje/OOP-Brain.git
 cd .\OOP-Brain\
-copy iris_dataset\iris.csv
+copy iris_dataset\iris.csv .
+cd src
 cl /EHsc *.cpp /Fe:oop_brain.exe
 del *.obj
 oop_brain.exe
