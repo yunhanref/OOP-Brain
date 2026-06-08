@@ -8,60 +8,44 @@
 
 Matrix DataHandler::loadCSV(const std::string& path, bool hasHeader) {
     std::ifstream file(path);
-    if (!file.is_open()) {
-        throw FileIOException();
-    }
+    if (!file.is_open()) throw FileIOException();
 
     std::vector<std::vector<double>> rows;
     std::string line;
 
-    if (hasHeader) {
-        std::getline(file, line); // Başlık satırını her zaman atla
-    }
+    if (hasHeader) std::getline(file, line); 
 
     while (std::getline(file, line)) {
-        // Satırı temizle: Başındaki/sonundaki boşlukları ve \r karakterini (Windows/Linux farkı) at
-        line.erase(std::remove(line.begin(), line.end(), '\r'), line.end());
-        if (line.empty() || line.find_first_not_of(" \t\n\v\f\r") == std::string::npos) continue;
+        if (line.empty()) continue; 
 
         std::vector<double> row;
         std::stringstream ss(line);
         std::string cell;
 
         while (std::getline(ss, cell, ',')) {
-            // Hücre boşsa veya sadece boşluksa atla
-            if (cell.empty()) continue; 
             try {
-                row.push_back(std::stod(cell));
+                // Sadece sayıya çevrilebilenleri al
+                size_t pos;
+                double val = std::stod(cell, &pos);
+                row.push_back(val);
             } catch (...) {
-                throw InvalidFormatException(); // Sayısal olmayan hücre
+                // Sayıya çevrilemiyorsa (örn: metin varsa) atla
+                continue; 
             }
         }
         
-        // Eğer satırda hiç veri yoksa (sadece virgül varsa) atla
-        if (!row.empty()) {
-            rows.push_back(row);
-        }
+        if (!row.empty()) rows.push_back(row);
     }
-
-    if (rows.empty()) {
-        throw InvalidFormatException();
-    }
-
+    
+    // Matris oluşturma kısmında satır/sütun eşitleme
     int nRows = static_cast<int>(rows.size());
-    int nCols = static_cast<int>(rows[0].size());
-
-    // Tüm satırların aynı uzunlukta olduğunu doğrula
-    for (const auto& r : rows) {
-        if (static_cast<int>(r.size()) != nCols) {
-            throw InvalidFormatException();
-        }
-    }
+    int nCols = 0;
+    for(const auto& r : rows) if((int)r.size() > nCols) nCols = (int)r.size();
 
     Matrix result(nRows, nCols);
     for (int i = 0; i < nRows; i++) {
         for (int j = 0; j < nCols; j++) {
-            result.at(i, j) = rows[i][j];
+            result.at(i, j) = (j < (int)rows[i].size()) ? rows[i][j] : 0.0;
         }
     }
     return result;
