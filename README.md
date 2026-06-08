@@ -74,6 +74,7 @@ Projeyi derlemek ve test sonuçlarını görmek için terminalinizde projenin `s
 
 **Windows (MSVC - Developer Command Prompt):**
 ```cmd
+cd /d %USERPROFILE%\Desktop
 git clone https://github.com/Grup7-Proje/OOP-Brain.git
 cd .\OOP-Brain\
 copy iris_dataset\iris.csv
