@@ -76,9 +76,10 @@ Projeyi derlemek ve test sonuçlarını görmek için terminalinizde projenin `s
 ```cmd
 cd /d %USERPROFILE%\Desktop
 git clone https://github.com/Grup7-Proje/OOP-Brain.git
+Masaüstüne klonlanan repository'ye girin ve iris_dataset klasörü içindeki cleared_iris.csv dosyasını src dosyasının içine kopyalayın.
+Ardından cleared_iris.csv dosyasının ismini iris.csv olarak değiştirin.
 cd .\OOP-Brain\
 cd src
-copy iris_dataset\iris.csv .
 cl /EHsc *.cpp /Fe:oop_brain.exe
 del *.obj
 oop_brain.exe
