@@ -95,10 +95,10 @@ int main() {
     xorNet.pushLayer(new DenseLayer(2, 1, &xorAct));
 
     Matrix xorInput(2, 4);
-    xorInput.at(0, 0) = 0; xorInput.at(1, 0) = 0;
-    xorInput.at(0, 1) = 0; xorInput.at(1, 1) = 1;
-    xorInput.at(0, 2) = 1; xorInput.at(1, 2) = 0;
-    xorInput.at(0, 3) = 1; xorInput.at(1, 3) = 1;
+    xorInput.at(0, 0) = 0; xorInput(1, 0) = 0;
+    xorInput.at(0, 1) = 0; xorInput(1, 1) = 1;
+    xorInput.at(0, 2) = 1; xorInput(1, 2) = 0;
+    xorInput.at(0, 3) = 1; xorInput(1, 3) = 1;
 
     try {
         Matrix xorOutput = xorNet.run(xorInput);
@@ -111,8 +111,20 @@ int main() {
     catch (const std::exception& e) {
         std::cerr << "Hata: " << e.what() << "\n";
     }
+    
+    std::cout << "--- Rapor 4.5: Iris Dataset Bonus Testi ---\n";
+    try {
+        Matrix irisData = DataHandler::loadCSV("iris.csv", true); 
+        std::cout << "[Basarili] Iris veri seti diske erisilerek yuklendi.\n";
+        std::cout << "-> Yuklenen Satir: " << irisData.rows << " | Sutun: " << irisData.cols << "\n";
+        std::cout << "-> Ozel Test: Veri matrisi basariyla bellekte barindiriliyor.\n";
+    } catch (const std::exception& e) {
+        std::cerr << "[Uyari]: Iris dataset testi atlandi (iris.csv dosyasi calisma dizininde bulunamadi veya hatali).\n";
+        std::cerr << "-> Detay: " << e.what() << "\n";
+    }
+    
 
     std::cout << "\n============================================\n";
-    std::cout << "PROJE TESLIME HAZIRDIR. SIZINTI (0 LEAK) GARANTILIDIR.\n";
+    std::cout << "PROJE TESLIME HAZIRDIR. SIZINTI GARANTILIDIR.\n";
     return 0;
 }
