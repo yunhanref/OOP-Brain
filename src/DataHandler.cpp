@@ -4,6 +4,7 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <algorithm> // trim için gerekli olabilir
 
 Matrix DataHandler::loadCSV(const std::string& path, bool hasHeader) {
     std::ifstream file(path);
@@ -15,24 +16,32 @@ Matrix DataHandler::loadCSV(const std::string& path, bool hasHeader) {
     std::string line;
 
     if (hasHeader) {
-        std::getline(file, line); // baslik satirini atla
+        std::getline(file, line); // Başlık satırını her zaman atla
     }
 
     while (std::getline(file, line)) {
-        if (line.empty()) continue; // bos satirlari gec
+        // Satırı temizle: Başındaki/sonundaki boşlukları ve \r karakterini (Windows/Linux farkı) at
+        line.erase(std::remove(line.begin(), line.end(), '\r'), line.end());
+        if (line.empty() || line.find_first_not_of(" \t\n\v\f\r") == std::string::npos) continue;
 
         std::vector<double> row;
         std::stringstream ss(line);
         std::string cell;
 
         while (std::getline(ss, cell, ',')) {
+            // Hücre boşsa veya sadece boşluksa atla
+            if (cell.empty()) continue; 
             try {
                 row.push_back(std::stod(cell));
             } catch (...) {
-                throw InvalidFormatException(); // sayisal olmayan hucre
+                throw InvalidFormatException(); // Sayısal olmayan hücre
             }
         }
-        rows.push_back(row);
+        
+        // Eğer satırda hiç veri yoksa (sadece virgül varsa) atla
+        if (!row.empty()) {
+            rows.push_back(row);
+        }
     }
 
     if (rows.empty()) {
@@ -42,7 +51,7 @@ Matrix DataHandler::loadCSV(const std::string& path, bool hasHeader) {
     int nRows = static_cast<int>(rows.size());
     int nCols = static_cast<int>(rows[0].size());
 
-    // Tum satirlarin ayni uzunlukta oldugunu dogrula
+    // Tüm satırların aynı uzunlukta olduğunu doğrula
     for (const auto& r : rows) {
         if (static_cast<int>(r.size()) != nCols) {
             throw InvalidFormatException();
