@@ -53,6 +53,9 @@ void testMatrixEngine() {
 }
 
 int main() {
+    // Rastgelelik çekirdeği program boyunca sadece bir kez başlatılmalı
+    std::srand(static_cast<unsigned>(std::time(nullptr)));
+    
     std::cout << "=== GRUP 7: OOP-BRAIN SINIR AGI KUTUPHANESI ===\n";
     std::cout << "[Sistem Entegratoru]: Mimari basariyla ayaga kaldirildi.\n\n";
 
