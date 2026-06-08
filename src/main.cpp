@@ -102,10 +102,10 @@ int main() {
 
     try {
         Matrix xorOutput = xorNet.run(xorInput);
-        std::cout << "Girdi (0,0) -> Ag Ciktisi: " << xorOutput.at(0, 0) << "\n";
-        std::cout << "Girdi (0,1) -> Ag Ciktisi: " << xorOutput.at(0, 1) << "\n";
-        std::cout << "Girdi (1,0) -> Ag Ciktisi: " << xorOutput.at(0, 2) << "\n";
-        std::cout << "Girdi (1,1) -> Ag Ciktisi: " << xorOutput.at(0, 3) << "\n";
+        std::cout << "Girdi (0,0) -> Ag Ciktisi: " << xorOutput(0, 0) << "\n";
+        std::cout << "Girdi (0,1) -> Ag Ciktisi: " << xorOutput(0, 1) << "\n";
+        std::cout << "Girdi (1,0) -> Ag Ciktisi: " << xorOutput(0, 2) << "\n";
+        std::cout << "Girdi (1,1) -> Ag Ciktisi: " << xorOutput(0, 3) << "\n";
         std::cout << "[Basarili] XOR yapisi calistirildi ve ileri iletim tamamlandi.\n";
     }
     catch (const std::exception& e) {
