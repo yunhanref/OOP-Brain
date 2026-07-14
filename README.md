@@ -10,8 +10,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-14354C?style=for-the-badge&logo=C++&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Machine_Learning-FF9900?style=for-the-badge" alt="Object Oriented Programming" />
-  <img src="https://img.shields.io/badge/CDC_BRFSS_Data-007ACC?style=for-the-badge" alt="Artificial Neural Network" />
+  <img src="https://img.shields.io/badge/Object Oriented Programming-FF9900?style=for-the-badge" alt="Object Oriented Programming" />
+  <img src="https://img.shields.io/badge/Artificial Neural Network-007ACC?style=for-the-badge" alt="Artificial Neural Network" />
 </p>
 
 # OOP-Brain: Yapay Sinir Ağı Kütüphanesi
