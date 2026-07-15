@@ -1,0 +1,109 @@
+<div align="center">
+  <img width="717" height="348" alt="CBU KOU" src="https://github.com/user-attachments/assets/039e3da1-d1a3-4a53-a005-4539d2ab705d" />
+</div>
+
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBU+%7C+KOU" alt="Proje Başlığı Animasyonu" />
+  
+  <p><b>Kocaeli Üniversitesi ve Manisa Celal Bayar Üniversitesi öğrencileri işbirliği ile geliştirilmiştir.</b></p>
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/C++-14354C?style=for-the-badge&logo=C++&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Object Oriented Programming-FF9900?style=for-the-badge" alt="Object Oriented Programming" />
+  <img src="https://img.shields.io/badge/Artificial Neural Network-007ACC?style=for-the-badge" alt="Artificial Neural Network" />
+</p>
+
+# OOP-Brain: Yapay Sinir Ağı Kütüphanesi
+
+**OOP-Brain**, C++'ın düşük seviyeli performans avantajları ile yüksek seviyeli Nesne Yönelimli Programlama (OOP) prensiplerini birleştiren, sıfırdan (hiçbir harici ML kütüphanesi kullanılmadan) geliştirilmiş bir yapay sinir ağı ileri iletim (forward pass) motorudur. 
+
+Öğrenciler tarafından 14 haftalık akademik müfredat kapsamında; **sıfır bellek sızıntısı (0 memory leak)**, katı hata yönetimi ve maksimum genişletilebilirlik hedeflenerek tasarlanmıştır.
+
+---
+## 👨‍💻 Rolüm ve Katkılarım (Mehmet Eren Gümüş)
+
+Üniversiteler arası bu ortak projede, **Matematik Motoru Geliştiricisi**, **Katman Uygulama Uzmanı** ve **Sistem Entegrasyon Sorumlusu** (Entegrasyon & Dökümantasyon) olarak görev aldım. Temel odak noktam, sinir ağının matematiksel altyapısını oluşturmak ve çalışma zamanındaki (runtime) işleyişini koordine etmekti.
+
+`OOP-Brain` kütüphanesine yaptığım spesifik teknik katkılar şunlardır:
+
+* **Doğrusal Cebir ve Matematik Motoru (`Matrix.cpp/h`):**
+    * Çekirdek matris operasyonlarını hiçbir dış kütüphane kullanmadan sıfırdan geliştirdim.
+    * Derin kopyalama (deep copy) ve taşıma (move) semantiklerini kullanarak güçlü bir bellek yönetimi uyguladım; böylece projenin testleri **0 bellek sızıntısı (memory leak)** ile geçmesini garanti altına aldım.
+    * İleri iletim (forward pass) sırasındaki sezgisel ve yüksek performanslı matris hesaplamaları için operatör aşırı yüklemelerini (`*`, `+`, `()`) geliştirdim.
+* **Katman Mimarisi (`DenseLayer.cpp/h`):**
+    * Ağırlıklar, sapma (bias) değerleri ve aktivasyon fonksiyonu işaretçilerini (pointers) içeren tam bağlantılı katman (fully connected layer) mantığını inşa ettim.
+    * Temel sınıftan (BaseLayer) türetilen metot ezme (method overriding) özelliğini kullanarak ileri iletimin matematiksel yürütmesini ($Z = W \cdot X + b$) tasarladım.
+* **Sistem Entegrasyonu (`NeuralNetwork.cpp/h`):**
+    * Polimorfik yürütme hattını (pipeline) yöneterek tüm sistem bileşenlerinin entegrasyonunu üstlendim.
+    * Katmanlar arasında sorunsuz veri akışını sağladım ve nihai mimari testler ile teknik dökümantasyon/raporlama süreçlerini yönettim.
+
+---
+
+## Temel Özellikler
+
+ **Kütüphanesiz (No Dependencies):** Yalnızca Standart C++ kütüphaneleri kullanılarak inşa edilmiştir.
+ **Sıfır Bellek Sızıntısı (0 Leak):** Deep copy, taşıma (move) semantikleri ve sanal yıkıcılar (virtual destructors) kullanılarak dinamik bellek yönetimi kusursuzlaştırılmıştır.
+ **Arayüz Tabanlı Tasarım (Interface-Based Design):** Polimorfizm (çok biçimlilik) sayesinde, sistemin ana omurgasına dokunmadan yeni aktivasyon fonksiyonları veya katman türleri sisteme kolayca enjekte edilebilir (Open/Closed Principle).
+ **Model Persistence (Kalıcılık):** Eğitilmiş ağ ağırlıkları (weights) ve sapma (bias) değerleri `.csv` formatında diske kaydedilebilir ve sonradan diskten okunabilir.
+ **Özel Hata Yönetimi:** Matris boyut uyuşmazlıkları (örn. geçersiz matris çarpımları) veya hatalı dosya formatları, özel Exception sınıfları ile çalışma zamanında sistem çökmeden güvenle yakalanır.
+
+---
+
+## Mimari ve Bileşenler
+
+Sistem 3 ana katmandan oluşmaktadır:
+
+1. **Matematik Motoru (`Matrix`):** Matris çarpımı ve toplaması için operatör aşırı yüklemeleri (`*`, `+`) barındıran, bellek kontrolünü encapsulate etmiş (sarmalamış) çekirdek birim.
+2. **Katman ve Aktivasyon (`DenseLayer` & `IActivation`):** $Z = W \cdot X + b$ ve $A = \sigma(Z)$ matematiksel operasyonlarını yürüten, `Sigmoid`, `ReLU` ve `Tanh` destekli çok katmanlı ağ yapısı.
+3. **Veri ve Entegrasyon (`DataHandler` & `NeuralNetwork`):** Dosya okuma/yazma (CSV) operasyonlarını ve ağın uçtan uca ileri iletim (forward pass) boru hattını (`pipeline`) yöneten birleştirici sistem.
+
+```
+OOP-Brain/
+│
+├── .gitignore
+├── README.md
+├── iris_dataset/
+   ├── iris.csv
+   └── cleared_iris.csv
+├── src/
+   ├── main.cpp
+   ├── Matrix.h
+   ├── Matrix.cpp
+   ├── IActivation.h
+   ├── Activations.h
+   ├── BaseLayer.h
+   ├── DenseLayer.h
+   ├── DenseLayer.cpp
+   ├── NeuralNetwork.h
+   ├── NeuralNetwork.cpp
+   ├── Exceptions.h
+   ├── DataHandler.cpp
+   ├── DataHandler.h
+   ├── ModelStorage.cpp
+   └── ModelStorage.h
+
+```
+
+---
+
+## Kurulum ve Çalıştırma
+
+Projeyi derlemek ve test sonuçlarını görmek için terminalinizde projenin `src` klasörü dizinine gidin ve derleyicinize uygun komutu çalıştırın:
+
+**Windows (MSVC - Developer Command Prompt):**
+```cmd
+cd /d %USERPROFILE%\Desktop
+git clone https://github.com/Grup7-Proje/OOP-Brain.git
+Masaüstüne klonlanan repository'ye girin ve iris_dataset klasörü içindeki cleared_iris.csv dosyasını src dosyasının içine kopyalayın.
+Ardından cleared_iris.csv dosyasının ismini iris.csv olarak değiştirin.
+cd .\OOP-Brain\
+cd src
+cl /EHsc *.cpp /Fe:oop_brain.exe
+del *.obj
+oop_brain.exe
+
+```
+<div align="center">
+  <img width="480" height="320" alt="Flag_of_Turkey svg" src="https://github.com/user-attachments/assets/4c6a0544-41c5-4a51-99e9-fc813302013a" />
+</div>
