@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBÜ+%7C+KOÜ" alt="Proje Başlığı Animasyonu" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBÜ+%7C+KOU" alt="Proje Başlığı Animasyonu" />
   
   <p><b>Developed by the students of Kocaeli, Manisa Celal Bayar universities.</b></p>
 
@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/Artificial Neural Network-007ACC?style=for-the-badge" alt="Artificial Neural Network" />
 </p>
 
-# OOP-Brain: Yapay Sinir Ağı Kütüphanesi
+# OOP-Brain: Artificial Neural Network Library
 
 **OOP-Brain** is an artificial neural network forward pass engine developed from scratch (without using any external ML libraries) that combines the low-level performance advantages of C++ with high-level Object-Oriented Programming (OOP) principles. 
 
