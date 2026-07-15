@@ -21,7 +21,6 @@
 
 It was designed with the goals of achieving **zero memory leaks (0 memory leak)**, robust error handling, and maximum extensibility
 
-[English Documentation](https://github.com/Grup7-Proje/OOP-Brain/blob/main/docs/eng_README.md)
 ---
 
 ## Key Features
