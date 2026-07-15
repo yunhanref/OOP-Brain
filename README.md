@@ -1,9 +1,9 @@
 <div align="center">
-  <img width="717" height="348" alt="CBU KOU" src="https://github.com/user-attachments/assets/039e3da1-d1a3-4a53-a005-4539d2ab705d" />
+  <img width="717" height="348" alt="MCBU KOU" src="https://github.com/user-attachments/assets/039e3da1-d1a3-4a53-a005-4539d2ab705d" />
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBÜ+%7C+KOU" alt="Proje Başlığı Animasyonu" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBU+%7C+KOU" alt="Proje Başlığı Animasyonu" />
   
   <p><b>Developed by the students of Kocaeli, Manisa Celal Bayar universities.</b></p>
 
