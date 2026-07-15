@@ -20,6 +20,8 @@
 
 Öğrenciler tarafından 14 haftalık akademik müfredat kapsamında; **sıfır bellek sızıntısı (0 memory leak)**, katı hata yönetimi ve maksimum genişletilebilirlik hedeflenerek tasarlanmıştır.
 
+[English Documentation](https://github.com/Grup7-Proje/OOP-Brain/blob/main/docs/eng_README.md)
+
 ---
 
 ## Temel Özellikler
