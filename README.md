@@ -3,9 +3,10 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBU+%7C+KOU" alt="Proje Başlığı Animasyonu" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=26&pause=1000&color=007ACC&center=true&vCenter=true&width=800&lines=OOP+Neural+Network+Project;MCBÜ+%7C+KOU" alt="Proje Başlığı Animasyonu" />
   
-  <p><b>Kocaeli Üniversitesi ve Manisa Celal Bayar Üniversitesi öğrencileri işbirliği ile geliştirilmiştir.</b></p>
+  <p><b>Developed by the students of Kocaeli, Manisa Celal Bayar universities.</b></p>
+
 </div>
 
 <p align="center">
@@ -14,33 +15,47 @@
   <img src="https://img.shields.io/badge/Artificial Neural Network-007ACC?style=for-the-badge" alt="Artificial Neural Network" />
 </p>
 
-# OOP-Brain: Yapay Sinir Ağı Kütüphanesi
+# OOP-Brain: Artificial Neural Network Library
 
-**OOP-Brain**, C++'ın düşük seviyeli performans avantajları ile yüksek seviyeli Nesne Yönelimli Programlama (OOP) prensiplerini birleştiren, sıfırdan (hiçbir harici ML kütüphanesi kullanılmadan) geliştirilmiş bir yapay sinir ağı ileri iletim (forward pass) motorudur. 
+**OOP-Brain** is an artificial neural network forward pass engine developed from scratch (without using any external ML libraries) that combines the low-level performance advantages of C++ with high-level Object-Oriented Programming (OOP) principles. 
 
-Öğrenciler tarafından 14 haftalık akademik müfredat kapsamında; **sıfır bellek sızıntısı (0 memory leak)**, katı hata yönetimi ve maksimum genişletilebilirlik hedeflenerek tasarlanmıştır.
+It was designed with the goals of achieving **zero memory leaks (0 memory leak)**, robust error handling, and maximum extensibility
 
-[English Documentation](https://github.com/Grup7-Proje/OOP-Brain/blob/main/docs/eng_README.md)
+---
+## My Role & Contributions
+
+In this collaborative multi-university project, I served as the **Math Engine Developer**, **Layer Implementation Specialist**, and **System Integration Lead**. My primary focus was building the mathematical foundation and orchestrating the runtime execution of the neural network.
+
+Here are my specific technical contributions to the `OOP-Brain` framework:
+
+* **Linear Algebra Math Engine (`Matrix.cpp/h`):** 
+    * Engineered the core matrix operations from scratch without external libraries.
+    * Implemented robust memory management using deep copy and move semantics, ensuring the project passed all tests with **0 memory leaks**.
+    * Developed operator overloading (`*`, `+`, `()`) for intuitive and high-performance matrix calculations during the forward pass.
+* **Layer Architecture (`DenseLayer.cpp/h`):** 
+    * Built the fully connected layer logic incorporating weights, biases, and activation function pointers.
+    * Designed the forward pass mathematical execution ($Z = W \cdot X + b$) utilizing method overriding derived from the base class.
+* **System Orchestration (`NeuralNetwork.cpp/h`):** 
+    * Led the integration of all system components, managing the polymorphic execution pipeline.
+    * Ensured seamless data flow across hidden layers and managed the final architectural testing and documentation processes.
+
+## Key Features
+
+ **No Dependencies:** Built using only Standard C++ libraries.
+ **Zero Memory Leak (0 Leak):** Dynamic memory management is perfected using deep copy, move semantics, and virtual destructors.
+ **Interface-Based Design:** Thanks to polymorphism, new activation functions or layer types can be easily injected into the system without touching the system's main backbone (Open/Closed Principle).
+ **Model Persistence:** Trained network weights and bias values can be saved to disk in '.csv' format and later read from the disk.
+ **Custom Error Handling:** Matrix size mismatches (e.g., invalid matrix multiplications) or incorrect file formats are safely caught at runtime without causing a system crash using custom Exception classes.
 
 ---
 
-## Temel Özellikler
+## Architecture and Components
 
- **Kütüphanesiz (No Dependencies):** Yalnızca Standart C++ kütüphaneleri kullanılarak inşa edilmiştir.
- **Sıfır Bellek Sızıntısı (0 Leak):** Deep copy, taşıma (move) semantikleri ve sanal yıkıcılar (virtual destructors) kullanılarak dinamik bellek yönetimi kusursuzlaştırılmıştır.
- **Arayüz Tabanlı Tasarım (Interface-Based Design):** Polimorfizm (çok biçimlilik) sayesinde, sistemin ana omurgasına dokunmadan yeni aktivasyon fonksiyonları veya katman türleri sisteme kolayca enjekte edilebilir (Open/Closed Principle).
- **Model Persistence (Kalıcılık):** Eğitilmiş ağ ağırlıkları (weights) ve sapma (bias) değerleri `.csv` formatında diske kaydedilebilir ve sonradan diskten okunabilir.
- **Özel Hata Yönetimi:** Matris boyut uyuşmazlıkları (örn. geçersiz matris çarpımları) veya hatalı dosya formatları, özel Exception sınıfları ile çalışma zamanında sistem çökmeden güvenle yakalanır.
+The system consists of 3 main layers:
 
----
-
-## Mimari ve Bileşenler
-
-Sistem 3 ana katmandan oluşmaktadır:
-
-1. **Matematik Motoru (`Matrix`):** Matris çarpımı ve toplaması için operatör aşırı yüklemeleri (`*`, `+`) barındıran, bellek kontrolünü encapsulate etmiş (sarmalamış) çekirdek birim.
-2. **Katman ve Aktivasyon (`DenseLayer` & `IActivation`):** $Z = W \cdot X + b$ ve $A = \sigma(Z)$ matematiksel operasyonlarını yürüten, `Sigmoid`, `ReLU` ve `Tanh` destekli çok katmanlı ağ yapısı.
-3. **Veri ve Entegrasyon (`DataHandler` & `NeuralNetwork`):** Dosya okuma/yazma (CSV) operasyonlarını ve ağın uçtan uca ileri iletim (forward pass) boru hattını (`pipeline`) yöneten birleştirici sistem.
+1. **Mathematics Engine ('Matrix'):** A core unit that contains operator overloads ('*', '+') for matrix multiplication and addition and encapsulates memory control.
+2. **Layer and Activation ('DenseLayer' & 'IActivation'):** A multilayer network structure that performs the mathematical operations $Z = W \cdot X + b$ and $A = \sigma(Z)$ and supports 'Sigmoid', 'ReLU', and 'Tanh'.
+3. **Data and Integration ('DataHandler' & 'NeuralNetwork'):** The aggregator system that manages file read/write (CSV) operations and the network's end-to-end forward pass pipeline.
 
 ```
 OOP-Brain/
@@ -71,16 +86,15 @@ OOP-Brain/
 
 ---
 
-## Kurulum ve Çalıştırma
-
-Projeyi derlemek ve test sonuçlarını görmek için terminalinizde projenin `src` klasörü dizinine gidin ve derleyicinize uygun komutu çalıştırın:
+## Setup
+To compile the project and see the test results, go to the 'src' folder directory of the project in your terminal and run the command appropriate for your compiler:
 
 **Windows (MSVC - Developer Command Prompt):**
 ```cmd
 cd /d %USERPROFILE%\Desktop
 git clone https://github.com/Grup7-Proje/OOP-Brain.git
-Masaüstüne klonlanan repository'ye girin ve iris_dataset klasörü içindeki cleared_iris.csv dosyasını src dosyasının içine kopyalayın.
-Ardından cleared_iris.csv dosyasının ismini iris.csv olarak değiştirin.
+Go to the repository cloned to your desktop and copy the cleared_iris.csv file in the iris_dataset folder into the src file.
+Then rename the cleared_iris.csv file to iris.csv.
 cd .\OOP-Brain\
 cd src
 cl /EHsc *.cpp /Fe:oop_brain.exe
