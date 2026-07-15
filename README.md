@@ -24,7 +24,7 @@ It was designed with the goals of achieving **zero memory leaks (0 memory leak)*
 [Turkish Documentation](https://github.com/Grup7-Proje/OOP-Brain/blob/main/docs/TR_README.md)
 
 ---
-## My Role & Contributions
+## 👤 My Role & Contributions
 
 In this collaborative multi-university project, I served as the **Math Engine Developer**, **Layer Implementation Specialist**, and **System Integration Lead**. My primary focus was building the mathematical foundation and orchestrating the runtime execution of the neural network.
 
