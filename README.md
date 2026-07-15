@@ -21,7 +21,7 @@
 
 It was designed with the goals of achieving **zero memory leaks (0 memory leak)**, robust error handling, and maximum extensibility
 
-[Turkish Documentation](https://github.com/yunhanref/OOP-Brain/blob/main/docs/TR_README.md)
+[Turkish Documentation]([https://github.com/yunhanref/OOP-Brain/blob/main/docs/TR_README.md](https://github.com/yunhanref/OOP-Brain/blob/main/docs/TR_README.md))
 
 ---
 ## 👤 My Role & Contributions
