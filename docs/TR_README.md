@@ -21,7 +21,7 @@
 Öğrenciler tarafından 14 haftalık akademik müfredat kapsamında; **sıfır bellek sızıntısı (0 memory leak)**, katı hata yönetimi ve maksimum genişletilebilirlik hedeflenerek tasarlanmıştır.
 
 ---
-## 👨‍💻 Rolüm ve Katkılarım (Mehmet Eren Gümüş)
+## 👤 Rolüm ve Katkılarım (Mehmet Eren Gümüş)
 
 Üniversiteler arası bu ortak projede, **Matematik Motoru Geliştiricisi**, **Katman Uygulama Uzmanı** ve **Sistem Entegrasyon Sorumlusu** (Entegrasyon & Dökümantasyon) olarak görev aldım. Temel odak noktam, sinir ağının matematiksel altyapısını oluşturmak ve çalışma zamanındaki (runtime) işleyişini koordine etmekti.
 
